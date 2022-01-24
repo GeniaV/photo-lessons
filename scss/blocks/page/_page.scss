@@ -1,0 +1,13 @@
+.page {
+    max-width: 1440px;
+    min-width: 300px;
+    margin: 0 auto 0 auto;
+    position: relative;
+    font-family: $font-family;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    @include flex-column-block;
+}

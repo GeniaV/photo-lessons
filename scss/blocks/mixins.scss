@@ -1,0 +1,125 @@
+@mixin flex-column-block {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin links-transition {
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+}
+
+@mixin rotation-animation {
+    animation: rotation;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+
+    @keyframes rotation {
+        from {
+          transform: rotate(0deg);
+        }
+        from {
+          transform: rotate(360deg);
+        }
+      }
+}
+
+@mixin font-style ($size, $weight, $line-height){
+    font: {
+        size: $size;
+        weight: $weight;
+    }
+    line-height: $line-height;
+}
+
+@mixin tablet-header-styles {
+    @media screen and (max-width: 775px) {
+        @content;
+    }
+}
+
+@mixin icon-header-style {
+    border: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+}
+
+@mixin mobile-header-styles {
+    @media screen and (max-width: 540px) {
+        @content;
+    }
+}
+
+@mixin display-grid {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+}
+
+@mixin grid-first-column-first-row {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+@mixin tablet-section-about-styles {
+    @media screen and (max-width: 1354px) {
+        @content;
+    }
+}
+
+@mixin mobile-section-about-styles {
+    @media screen and (max-width: 647px) {
+        @content;
+    }
+}
+
+@mixin tablet-section-composition-styles {
+    @media screen and (max-width: 1414px) {
+        @content;
+    }
+}
+
+@mixin mobile-section-composition-styles {
+    @media screen and (max-width: 647px) {
+        @content;
+    }
+}
+
+@mixin tablet-section-camera-styles {
+    @media screen and (max-width: 1400px) {
+        @content;
+    }
+}
+
+@mixin mobile-section-camera-styles {
+    @media screen and (max-width: 688px) {
+        @content;
+    }
+}
+
+@mixin tablet-section-search-orders-styles {
+    @media screen and (max-width: 954px) {
+        @content;
+    }
+}
+
+@mixin mobile-section-search-orders-styles {
+    @media screen and (max-width: 400px) {
+        @content;
+    }
+}
+
+@mixin tablet-section-footer-orders-styles {
+    @media screen and (max-width: 969px) {
+        @content;
+    }
+}
+
+@mixin mobile-section-footer-orders-styles {
+    @media screen and (max-width: 670px) {
+        @content;
+    }
+}

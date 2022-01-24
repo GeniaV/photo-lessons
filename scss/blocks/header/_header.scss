@@ -1,0 +1,144 @@
+.header {
+    &__body {
+        background-color: $red-base-color;
+        padding-top: 15px;
+        padding-bottom: 18px;
+        padding-left: 50px;
+        padding-right: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 3;
+        @include tablet-header-styles {
+            padding-top: 24px;
+            padding-bottom: 24px;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        @include mobile-header-styles {
+            padding: 20px;
+        }
+    }
+    &__burger-menu-container {
+        display: none;
+        @include tablet-header-styles {
+            background-color: $red-base-color;
+            display: none;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 84px;
+            z-index: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            &_opened {
+                display: flex;
+            }
+        }
+        @include mobile-header-styles {
+            min-height: 198px;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &__list {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        width: 351px;
+        @include tablet-header-styles {
+            margin-left: 40px;
+        }
+        @include mobile-header-styles {
+            @include flex-column-block;
+            text-align: center;
+            justify-content: center;
+            margin-left: 0px;
+            margin-top: 70px;
+            display: grid;
+            gap: 17px;
+        }
+    }
+    &__logo {
+        width: 40px;
+        height: 40px;
+        &:hover {
+            cursor: $cursor;
+            @include rotation-animation;
+        }
+        @include tablet-header-styles {
+            width: 36px;
+            height: 36px;
+        }
+        @include mobile-header-styles {
+            width: 30px;
+            height: 30px;
+            z-index: 5;
+        }
+    }
+    &__burger {
+        display: none;
+        @include tablet-header-styles {
+            display: block;
+            width: 32px;
+            height: 23px;
+            background-image: url(../images/burger-menu.svg);
+            @include icon-header-style;
+            cursor: $cursor;
+        }
+    }
+    &__menu-burger {
+        padding: 0;
+        margin: 0;
+        @include tablet-header-styles {
+            margin-left: 40px;
+        }
+        @include mobile-header-styles {
+            width: 100%;
+            display: flex;
+            max-width: 320px;
+            padding: 0;
+            margin: 0;
+        }
+    }
+    &__link {
+        color: $white-color;
+        @include font-style(16px, 400, 124%);
+        text-decoration: none;
+        margin: 0;
+        @include links-transition;
+        &:hover {
+            @include links-transition;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: $cursor;
+        }
+        @include mobile-header-styles {
+            padding-left: 0;
+            margin: 0;
+            box-sizing: border-box;
+            padding-top: 30px;
+        }
+    }
+    &__menu {
+        @include tablet-header-styles {
+            display: none;
+        }
+    }
+    &__burger-menu-close {
+        width: 27px;
+        height: 27px;
+        position: absolute;
+        right: 35px;
+        background-image: url(../images/close-icon.svg);
+        @include icon-header-style;
+        cursor: $cursor;
+        @include mobile-header-styles {
+            top: 21px;
+            right: 16px;
+        }
+    }
+}
+
