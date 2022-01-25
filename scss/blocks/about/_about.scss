@@ -1,88 +1,91 @@
 .about {
-    padding: $padding-section-base;
-    @include display-grid;
-    grid-template-rows: repeat(2, 1fr);
-    &__text {
-        @include font-style (20px, 400, 139%);
-        max-width: 469px;
-        margin: 0;
-        @include tablet-section-about-styles {
-            margin: 0 0 60px 0;
-        }
-        @include mobile-section-about-styles {
-            font-size: 14px;
-            line-height: 129%;
-            max-width: 276px;
-            margin: 0 0 30px 0;
-        }
-    }
-    &__title {
-        @include font-style (100px, 400, 110%);
-        margin: 0;
-        @include grid-first-column-first-row;
-        @include mobile-section-about-styles {
-            @include font-style (47px, 400, 119%);
-            max-width: 282px;
-            margin: 0;
-            justify-self: center;
-        }
-    }
-    &__more-button {
-        @include font-style (18px, 400, 156%);
-        border: 2px solid #000000;
-        border-radius: 9999px;
-        height: 49px;
-        width: 228px;
-        background-color: $white-color;
-        padding: 9px 0 10px 0;
-        &:hover {
-            cursor: $cursor;
-            @include links-transition;
-            font-weight: 500;
-        }
-        @include mobile-section-about-styles {
-            font-size: 14px;
-            line-height: 200%;
-            height: 40px;
-            width: 169px;
-            padding: 0;
-        }
-    }
-    &__discription {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 2;
-        grid-row-end: 2;
-        @include flex-column-block;
-        justify-content: space-between;
-        @include tablet-section-about-styles {
-            display: flex;
-        }
-    }
-    &__photo {
-        width: 100%;
-        max-width: 642px;
-        max-height: 555px;
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 3;
-        @include tablet-section-about-styles {
-            max-width: 688px;
-            max-height: 594px;
-            padding: 60px 0 60px 0;
-        }
-        @include mobile-section-about-styles {
-            max-width: 280px;
-            max-height: 242px;
-            justify-self: center;
-        }
-    }
-    @include tablet-section-about-styles {
-        padding: 40px;
-        @include flex-column-block;
-    }
-    @include mobile-section-about-styles {
-        padding: 14px 20px 20px 20px;
-    }
+  padding: $padding-section-base;
+  @include display-grid;
+  grid-template-rows: repeat(2, 1fr);
+  &__text {
+      @include font-style (20px, 400, 139%);
+      max-width: 469px;
+      margin: 0;
+      @include tablet-section-about-styles {
+          margin: 0 0 60px 0;
+      }
+      @include mobile-section-about-styles {
+          font-size: 14px;
+          line-height: 129%;
+          max-width: 276px;
+          margin: 0 0 30px 0;
+      }
+  }
+  &__title {
+      @include font-style (100px, 400, 110%);
+      margin: 0;
+      @include grid-first-column-first-row;
+      @include decrease-font-size {
+        @include font-style (50px, 400, 110%);
+      }
+      @include mobile-section-about-styles {
+          @include font-style (47px, 400, 119%);
+          max-width: 282px;
+          margin: 0;
+          justify-self: center;
+      }
+  }
+  &__more-button {
+      @include font-style (18px, 400, 156%);
+      border: 2px solid #000000;
+      border-radius: 9999px;
+      height: 49px;
+      width: 228px;
+      background-color: $white-color;
+      padding: 9px 0 10px 0;
+      &:hover {
+          cursor: $cursor;
+          @include links-transition;
+          font-weight: 500;
+      }
+      @include mobile-section-about-styles {
+          font-size: 14px;
+          line-height: 200%;
+          height: 40px;
+          width: 169px;
+          padding: 0;
+      }
+  }
+  &__discription {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 2;
+      @include flex-column-block;
+      justify-content: space-between;
+      @include tablet-section-about-styles {
+          display: flex;
+      }
+  }
+  &__photo {
+      width: 100%;
+      max-width: 642px;
+      max-height: 555px;
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 3;
+      @include tablet-section-about-styles {
+          max-width: 688px;
+          max-height: 594px;
+          padding: 60px 0 60px 0;
+      }
+      @include mobile-section-about-styles {
+          max-width: 280px;
+          max-height: 242px;
+          justify-self: center;
+      }
+  }
+  @include tablet-section-about-styles {
+      padding: 40px;
+      @include flex-column-block;
+  }
+  @include mobile-section-about-styles {
+      padding: 14px 20px 20px 20px;
+  }
 }

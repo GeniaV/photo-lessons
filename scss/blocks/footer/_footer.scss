@@ -109,8 +109,8 @@
     @include mobile-section-footer-orders-styles {
         padding: $padding-section-mobile;
         @include flex-column-block;
-    }
-    &__title-container {
-        border-top: 1px solid $white-color;
+        &__title-container {
+          border-top: 1px solid $white-color;
+      }
     }
 }
