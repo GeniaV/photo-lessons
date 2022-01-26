@@ -1,0 +1,161 @@
+.composition {
+  background-color: $yellow-color;
+  padding: 50px 50px 45px 50px;
+  @include display-grid;
+  grid-template-rows: 78px 228px 1fr 189px;
+  &__section-name {
+      text-transform: $text-transform;
+      @include font-style (18px, 400, 156%);
+      margin: 0;
+      @include grid-first-column-first-row;
+      @include tablet-section-composition-styles {
+          margin-bottom: 40px;
+      }
+      @include mobile-section-composition-styles {
+          margin-bottom: 30px;
+          @include font-style (14px, 400, 143%);
+          padding-top: 20px;
+          border-top: 1px solid $black-color;
+      }
+  }
+  &__title {
+      @include font-style (64px, 400, 100%);
+      margin: 0;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      max-width: 403px;
+      @include mobile-section-composition-styles {
+          font-size: 30px;
+          line-height: 127%;
+      }
+  }
+  &__text {
+      @include font-style (18px, 400, 156%);
+      margin: 0;
+      padding-bottom: 20px;
+      max-width: 688px;
+      &:first-child {
+          @include tablet-section-composition-styles {
+              margin-top: 0;
+          }
+      }
+      &:last-child {
+          @include tablet-section-composition-styles {
+              padding-bottom: 0;
+              border-bottom: none;
+          }
+      }
+      @include tablet-section-composition-styles {
+          border-bottom: 1px solid $black-color;
+          padding-bottom: 29px;
+          margin-top: 30px;
+          max-width: 100%;
+      }
+      @include mobile-section-composition-styles {
+          font-size: 14px;
+          line-height: 129%;
+          padding-bottom: 11px;
+          margin-top: 15px;
+      }
+      &:nth-child(2) {
+          @include mobile-section-composition-styles {
+              border-bottom: none;
+              max-width: 210px;
+              padding-bottom: 0;
+          }
+      }
+      &:nth-child(3) {
+          @include mobile-section-composition-styles {
+              padding-top: 16px;
+              border-top: 1px solid $black-color;
+              margin-top: 11px;
+          }
+      }
+  }
+  &__text-desc {
+      @include font-style (18px, 400, 156%);
+      margin: 0;
+      padding-bottom: 20px;
+      max-width: 374px;
+      &:nth-child(2) {
+          max-width: 350px;
+      }
+      @include tablet-section-composition-styles {
+          max-width: 380px;
+      }
+      @include  mobile-section-composition-styles {
+          font-size: 14px;
+          line-height: 129%;
+          padding-bottom: 35px;
+      }
+      &:last-child {
+        @include mobile-section-composition-styles {
+          padding-bottom: 31px;
+        }
+      }
+  }
+  &__description {
+      @include flex-column-block;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 3;
+      grid-row-end: 4;
+      justify-content: space-between;
+  }
+  &__photo {
+      width: 100%;
+      max-width: 642px;
+      max-height: 685px;
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 4;
+      @include tablet-section-composition-styles {
+          max-width: 688px;
+          margin: $margin-photo;
+      }
+      @include mobile-section-composition-styles {
+          max-width: 280px;
+          max-height: 278px;
+          justify-self: center;
+      }
+  }
+  &__main-principles {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 4;
+      grid-row-end: 5;
+      display: grid;
+      margin: 100px 0 0 0;
+      grid-template-columns: repeat(4, 291px);
+      gap: 56px;
+      @include tablet-section-composition-styles {
+          margin-top: 80px;
+          display: block;
+      }
+      @include mobile-section-composition-styles {
+          margin-top: 80px;
+      }
+  }
+  @include tablet-section-composition-styles {
+      padding: $padding-section-tablet;
+      @include flex-column-block;
+  }
+  &__paragraphs {
+      @include tablet-section-composition-styles {
+          margin-bottom: 40px;
+      }
+      @include mobile-section-composition-styles {
+          margin-bottom: 0px;
+      }
+  }
+  @include mobile-section-composition-styles {
+      padding: $padding-section-mobile;
+      margin: 0;
+  }
+  &__span-accent {
+    font-weight: $bold-accent;
+  }
+}

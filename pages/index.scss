@@ -1,2 +1,12 @@
+@import '../scss/blocks/constants.scss';
+@import '../scss/blocks/mixins.scss';
 @import '../vendor/normalize.css';
 @import '../fonts/fonts';
+@import '../scss/blocks/page/page';
+@import '../scss/blocks/header/header';
+@import '../scss/blocks/about/about';
+@import '../scss/blocks/enroll-button/enroll-button';
+@import '../scss/blocks/composition/composition';
+@import '../scss/blocks/camera/camera';
+@import '../scss/blocks/search-orders/search-orders';
+@import '../scss/blocks/footer/footer';

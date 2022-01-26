@@ -1,0 +1,116 @@
+.footer {
+    background-color: $red-base-color;
+    padding: $padding-section-base;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    column-gap: 42px;
+    &__title {
+        @include font-style(120px, 400, 100%);
+        color: $white-color;
+        margin: 0;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        margin-bottom: 120px;
+        max-width: 690px;
+        @include tablet-section-footer-orders-styles {
+            @include font-style(100px, 400, 105%);
+            margin-bottom: 190px;
+            max-width: 600px;
+        }
+        @include mobile-section-footer-orders-styles {
+            @include font-style(48px, 400, 120%);
+            margin-bottom: 190px;
+            max-width: 274px;
+            padding-top: 19px;
+            margin-bottom: 196px;
+        }
+    }
+    &__copyright {
+        @include font-style(15px, 700, 160%);
+        color: $white-color;
+        margin: 0;
+        margin-top: 86px;
+        @include tablet-section-footer-orders-styles {
+            margin-top: 80px;
+        }
+        @include mobile-section-footer-orders-styles {
+            margin-top: 40px;
+            @include font-style(12px, 400, 200%);
+        }
+    }
+    &__email-input {
+        background-color: $white-color;
+        border-right: none;
+        border-left: 2px solid $black-color;
+        border-bottom: 2px solid $black-color;
+        border-top: 2px solid $black-color;
+        padding: 0;
+        width: 326px;
+        height: 46px;
+        border-radius: 8px 0px 0px 8px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        padding-left: 20px;
+        cursor: $cursor;
+        @include font-style(14px, 400, 171%);
+        letter-spacing: 0.375px;
+        &::placeholder {
+          color: $black-color;
+          @include font-style(14px, 400, 171%);
+          max-width: 250px;
+          letter-spacing: 0.375px;
+        }
+        &::-moz-placeholder {
+          color: $black-color;
+          opacity: 1;
+        }
+        &:focus {
+            outline: none;
+            &:-webkit-input-placeholder {
+                color: transparent;
+            }
+            &::-moz-placeholder {
+                color: transparent;
+            }
+            &:-ms-input-placeholder {
+                color: transparent;
+            }
+        }
+        @include tablet-section-footer-orders-styles {
+            width: 324px;
+        }
+        @include mobile-section-footer-orders-styles {
+            width: 168px;
+            @include font-style (11px, 400, 218%);
+        }
+        &::placeholder {
+            @include mobile-section-footer-orders-styles {
+                @include font-style (11px, 400, 218%);
+                max-width: 134px;
+            }
+        }
+    }
+    &__enroll-container {
+        display: flex;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    &__enroll-arrow {
+        padding-top: 8px;
+        @include tablet-section-footer-orders-styles {
+            display: none;
+        }
+    }
+    @include tablet-section-footer-orders-styles {
+        padding: $padding-section-tablet;
+        @include flex-column-block;
+    }
+    @include mobile-section-footer-orders-styles {
+        padding: $padding-section-mobile;
+        @include flex-column-block;
+        &__title-container {
+          border-top: 1px solid $white-color;
+      }
+    }
+}

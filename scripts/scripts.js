@@ -4,11 +4,11 @@ const burgerMenu = document.querySelector('.header__burger-menu-container');
 const closeMenuButton = document.querySelector('.header__burger-menu-close');
 
 menuButton.addEventListener('click', function () {
-    burgerMenu.classList.add('header__burger-menu_opened');
+    burgerMenu.classList.add('header__burger-menu-container_opened');
 });
 
 closeMenuButton.addEventListener('click', function () {
-    burgerMenu.classList.remove('header__burger-menu_opened');
+    burgerMenu.classList.remove('header__burger-menu-container_opened');
 });
 
 // Форма отправки электронного адреса
@@ -42,9 +42,10 @@ document.addEventListener( 'click', (e) => {
 
 // Наведение курсоса на кнопку
 enrollButton.addEventListener('mouseout', function() {
-    enrollButton.style.fontWeight = '400';
+  enrollButton.style.fontWeight = '400';
 })
 
 enrollButton.addEventListener('mouseover', function() {
-    enrollButton.style.fontWeight = '500';
+  enrollButton.style.fontWeight = '500';
 })
+

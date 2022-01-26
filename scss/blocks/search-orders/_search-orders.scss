@@ -1,0 +1,77 @@
+.search-orders {
+    padding: $padding-section-base;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr max-content;
+    &__section-name {
+        @include font-style (18px, 400, 156%);
+        text-transform: $text-transform;
+        margin: 0;
+        @include grid-first-column-first-row;
+        @include mobile-section-search-orders-styles {
+            @include font-style (14px, 400, 143%);
+            padding-top: 20px;
+            border-top: 1px solid $black-color;
+        }
+    }
+    &__title {
+        @include font-style (64px, 400, 100%);
+        margin: 78px 0 106px 0;
+        @include grid-first-column-first-row;
+        @include tablet-section-search-orders-styles {
+            margin: 40px 0 0px 0;
+        }
+        @include mobile-section-search-orders-styles {
+            font-size: 32px;
+            line-height: 119%;
+            margin: 28px 0 0 0;
+        }
+    }
+    &__photo {
+        width: 100%;
+        max-width: 688px;
+        max-height: 333px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        @include tablet-section-search-orders-styles {
+            max-height: 360px;
+            margin: $margin-photo;
+        }
+        @include mobile-section-search-orders-styles {
+            max-width: 280px;
+            max-height: 147px;
+        }
+    }
+    &__text {
+        @include font-style (18px, 400, 156%);
+        padding-top: 25px;
+        max-width: 380px;
+        margin: 0;
+        @include tablet-section-search-orders-styles {
+            padding-top: 0;
+            margin-bottom: 60px;
+        }
+        @include mobile-section-search-orders-styles {
+            @include font-style (14px, 400, 129%);
+            margin-bottom: 30px;
+        }
+    }
+    &__description {
+        @include flex-column-block;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        justify-content: space-between;
+        justify-self: end;
+    }
+    @include tablet-section-search-orders-styles {
+        padding: $padding-section-tablet;
+        @include flex-column-block;
+    }
+    @include mobile-section-search-orders-styles {
+        padding: $padding-section-mobile;
+    }
+}
