@@ -13,6 +13,8 @@ HTML, CSS, JavaScript, SASS.
 
 **Учебный проект** представляет собой лэндинг для курса по фотографии.
 
+![Preview](./images/demoo.png)
+
 Стили в проекте написаны на препроцессоре SASS, базовая функциональность — на JavaScript _(работа бургерного меню, форма для отправки электронного адреса в футере, изменение текста на кнопке в футере, наведение на кнопку)._
 
 Верстка адаптирована под устройства с шириной экрана **1440px**, **768px** и **320px**.
@@ -24,4 +26,3 @@ HTML, CSS, JavaScript, SASS.
 | 1 | запуск из папки проекта _(файл index.html)_ |
 | 2 | запуск в VSCode при помощи расширения [LiveServer](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) |
 
-![Preview](./images/demoo.png)
